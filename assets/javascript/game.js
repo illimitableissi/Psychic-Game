@@ -63,7 +63,7 @@ function newGame () {
         
     }
 
-    if(losses === 2){
+    if(losses === 5){
         document.getElementById("Scorpion").src = "./assets/images/yoursoulismine.gif"
         alert("YOUR SOUL IS MINE!!!")
         wins = 0;
