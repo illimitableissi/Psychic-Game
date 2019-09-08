@@ -15,8 +15,8 @@ var displayWins = document.getElementById("display-wins");
 var displayLosses = document.getElementById("display-losses");
 var guessesRemaining = document.getElementById("guesses-remaining");
 var alreadyGuessed = document.getElementById("already-guessed");
-var scorpion = document.getElementById("Scorpion");
-var fatality = document.getElementById("Fatality")
+var scorpion = document.getElementById("scorpion");
+var fatality = document.getElementById("fatality")
 
 
 // New Game
@@ -32,7 +32,7 @@ function newGame () {
     displayWins.textContent ="Wins: " + " " + wins;
     displayLosses.textContent = "Losses: " + " " + losses;
     guessesRemaining.textContent ="Number of Guesses Remaining: " + " " + remainingGuesses;
-    alreadyGuessed.textContent ="Letters Already Guessed" + " " + wrongLetter;
+    alreadyGuessed.textContent ="Letters Already Guessed: " + " " + wrongLetter;
 }
 
  document.onkeydown = function(event) {
@@ -48,14 +48,16 @@ function newGame () {
     
 //when player guess is incorrect 
     } else  {
-        remainingGuesses-- ;
+        wrongLetter.push(userGuess)
+        guessesRemaining.textContent = "Number of Guesses Remaining: " + " " + remainingGuesses-- ;
         displayLosses.textContent = "Losses: " + " " + losses;
-        alreadyGuessed.textContent = "Letters Already Guessed: " + " " + wrongLetter.push(userGuess);
+        alreadyGuessed.textContent = "Letters Already Guessed: " + " " + wrongLetter.join(" ") ;
+        console.log(wrongLetter)
     }
 
-    if(remainingGuesses === -0) {
+    if(remainingGuesses == -1) {
         fatality.play();
-        alert("FATALITY!!")
+        alert("FATALITY!! You have no guesses remaining")
         losses++;
         newGame();
         
