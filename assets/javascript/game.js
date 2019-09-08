@@ -62,9 +62,23 @@ function newGame () {
         newGame();
         
     }
-}
-newGame()
 
+    if(losses === 2){
+        document.getElementById("Scorpion").src = "./assets/images/yoursoulismine.gif"
+        alert("YOUR SOUL IS MINE!!!")
+        wins = 0;
+        losses = 0;
+        remainingGuesses = 8;
+        wrongLetter = [];
+        displayWins.textContent ="Wins: " + " " + wins;
+        displayLosses.textContent = "Losses: " + " " + losses;
+        guessesRemaining.textContent ="Number of Guesses Remaining: " + " " + remainingGuesses;
+        alreadyGuessed.textContent ="Letters Already Guessed: " + " " + wrongLetter;
+        
+       }
+    }
+
+newGame();
 
 
 
