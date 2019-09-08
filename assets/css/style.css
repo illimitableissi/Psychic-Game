@@ -1,0 +1,18 @@
+body{
+    background-image: url(../images/wallpaper.jpg)
+}
+
+
+
+h3, h1{
+    color: black;
+    margin-left: 50px
+
+}
+
+.container{
+    max-width: 100%;
+}
+
+
+
