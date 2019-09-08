@@ -2,17 +2,29 @@ body{
     background-image: url(../images/wallpaper.jpg)
 }
 
-
-
-h3, h1{
+h3, h2{
     color: black;
-    margin-left: 50px
-
+    margin-left: 50px;
+    font-family: 'Nosifer', cursive;
 }
 
 .container{
     max-width: 100%;
 }
 
+h1{
+}
 
+.display-1{
+    color: black;
+    text-align:center;
+}
 
+.col-6{
+text-align: center  
+    
+}
+
+#guesses-remaining{
+    color: red
+}

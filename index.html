@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
 
 </head>
 
@@ -16,14 +17,15 @@
 
 <div id="Game" class="container">
     <div class="row">
-        <h1>Psychic Kombat</h1>
+            <h1 class="display-1">Psychic Kombat</h1>
     </div>
     <div class="row">
         <div class="col-6">
         <img id="Scorpion" src="./assets/images/Scorpion.jpg">
         </div>
         <div class="col-6">
-            <h1>Guess what letter I'm thinking of</h1>
+            <h2>Guess what letter I'm thinking of: </h2>
+            <br>
             <h3 id="display-wins">Wins: </h3>
             <audio src="./assets/sounds/GetOverHere.mp3" id="scorpion"></audio>
             <h3 id="display-losses">Losses: </h3>
@@ -33,6 +35,8 @@
         </div>
     </div>
 </div>
+
+
 <script type="text/javascript" src="./assets/javascript/game.js"></script>
 </body>
 </html>
