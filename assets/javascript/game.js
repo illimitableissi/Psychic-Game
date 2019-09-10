@@ -7,7 +7,7 @@ var wins = 0;
 var losses = 0;
 var remainingGuesses = 8;
 
-// Arrays listing every letter of the alphabet
+// Array listing every letter of the alphabet
 var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" ]
 
 // Variables that hold references to the places in the HTML.
@@ -34,19 +34,19 @@ function newGame () {
     guessesRemaining.textContent ="Number of Guesses Remaining: " + " " + remainingGuesses;
     alreadyGuessed.textContent ="Letters Already Guessed: " + " " + wrongLetter;
 }
-
+// Keyboard event. logs which key user presses
  document.onkeydown = function(event) {
     var userGuess = event.key
         console.log(userGuess)
         
-//if user guesses correctly
+//if player guesses correctly
     if(userGuess === computerGuess) {
         scorpion.play();
         alert("You guessed " + computerGuess + " correctly!");
         displayWins.textContent = "Wins: " + " " + wins++;
         newGame();
     
-//when player guess is incorrect 
+//when player's guess is incorrect 
     } else  {
         wrongLetter.push(userGuess)
         guessesRemaining.textContent = "Number of Guesses Remaining: " + " " + remainingGuesses-- ;
@@ -54,7 +54,7 @@ function newGame () {
         alreadyGuessed.textContent = "Letters Already Guessed: " + " " + wrongLetter.join(" ") ;
         console.log(wrongLetter)
     }
-
+//when player runs out of guesses
     if(remainingGuesses == -1) {
         fatality.play();
         alert("FATALITY!! You have no guesses remaining")
@@ -62,7 +62,7 @@ function newGame () {
         newGame();
         
     }
-
+//when player reaches maximum number of losses
     if(losses === 5){
         document.getElementById("Scorpion").src = "./assets/images/yoursoulismine.gif"
         alert("YOUR SOUL IS MINE!!!")
@@ -77,8 +77,8 @@ function newGame () {
         
        }
     }
-
+//replays game
 newGame();
-
+// document.getElementById("Scorpion").src = "./assets/images/Scorpion.jpg" - Cant get image to switch to gif then switch back...
 
 
